@@ -2,3 +2,4 @@
 /.swc/
 /.turbo/
 /node_modules/
+/src/app/articles/markdown-syntax/markdown-syntax.mdx

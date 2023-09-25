@@ -2,7 +2,7 @@
 
 A Simple blog template with Markdown syntax.
 
-Live demo: https://blog-template.vercel.app/
+Live demo: https://blog-template-zeta.vercel.app/
 
 ## Building Blog Template
 

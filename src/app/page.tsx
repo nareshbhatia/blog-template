@@ -15,6 +15,9 @@ export default function Home() {
                   Domain-Driven Design
                 </Link>
               </li>
+              <li>
+                <Link href="/articles/markdown-syntax">Markdown Syntax</Link>
+              </li>
             </ul>
           </article>
         </div>

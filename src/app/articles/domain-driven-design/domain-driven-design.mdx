@@ -1,0 +1,38 @@
+# DDD
+
+Domain-Driven Design (DDD) is an approach for building high-quality products
+that meet the needs of a business and its customers. It emphasizes collaboration
+among domain experts, product managers, designers, engineers, and other
+disciplines to create a _domain model_ that reflects these needs. This involves
+agreeing on common terminology, identifying business entities, and documenting
+the relationships between those entities and their behavior.
+
+Why is this important? I have seen many projects delayed or even fail because
+the team did not understand the domain or the needs of the business clearly.
+There may be confusion because team members use similar terms that have
+overlapping meaning. This results in incorrect interpretation of requirements, a
+mismatch between front-end and back-end concepts, confusing APIs, confusing
+terms that your customers don't understand, and a whole slew of other problems.
+
+On a recent project, my team debated the differences between _alerts_,
+_notifications_, and _events_ because these terms were being used
+interchangeably. No one had clear definitions in their heads. This costed us
+several weeks of productivity. Does this scenario sound familiar? Domain-Driven
+Design is the tried-and-tested way to solve this problem. Many successful
+organizations depend on it to clearly articulate domain concepts and deliver
+mission-critical systems.
+
+This article explains how to use DDD, the concepts you'll need to know, and how
+to work with your team to build high-quality products. It is geared toward
+technical and non-technical readers. The first three sections (including this
+section, 2 – Ubiquitous Language, and 3 – Domain Model) gently introduce
+everyone to these concepts. If you are an engineer, go through the remaining
+sections to understand how to translate the domain model into a working
+implementation.
+
+We'll use the example of a sample trading application, called Bullsfirst along
+the way. Here's what the application looks like:
+
+Bullsfirst allows traders to open an account at a brokerage firm. They can then
+place orders to buy and sell securities. The brokerage firm places the orders in
+an exchange where they can be executed.

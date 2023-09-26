@@ -11,12 +11,17 @@ export default function Home() {
             <h1>Articles</h1>
             <ul>
               <li>
-                <Link href="/articles/domain-driven-design">
+                <Link href="/blog/domain-driven-design">
                   Domain-Driven Design
                 </Link>
               </li>
               <li>
-                <Link href="/articles/markdown-syntax">Markdown Syntax</Link>
+                <Link href="/blog/markdown-syntax">Markdown Syntax</Link>
+              </li>
+              <li>
+                <Link href="/blog/syntax-highlighting">
+                  Syntax Highlighting
+                </Link>
               </li>
             </ul>
           </article>

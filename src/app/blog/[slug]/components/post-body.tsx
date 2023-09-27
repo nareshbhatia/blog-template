@@ -1,15 +1,15 @@
+import { mdxComponents } from '@/components/MDXComponents';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 
-import { mdxComponents } from '@/components/MDXComponents';
-import remarkGfm from 'remark-gfm';
-import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 import remarkToc from 'remark-toc';
 
 export function PostBody({ children }: { children: string }) {
   return (
     <MDXRemote
-      source={children}
+      components={mdxComponents}
       options={{
         mdxOptions: {
           remarkPlugins: [
@@ -22,7 +22,7 @@ export function PostBody({ children }: { children: string }) {
           rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
         },
       }}
-      components={mdxComponents}
+      source={children}
     />
   );
 }

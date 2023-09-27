@@ -1,7 +1,7 @@
-import { MDXComponents } from 'mdx/types';
-import NextImage from 'next/image';
-import { Code } from 'bright';
 import { MDXImage } from './mdx-image';
+import { Code } from 'bright';
+import type { MDXComponents } from 'mdx/types';
+import NextImage from 'next/image';
 
 export const mdxComponents: MDXComponents = {
   pre: ({
@@ -10,15 +10,15 @@ export const mdxComponents: MDXComponents = {
   }: React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLElement>,
     HTMLPreElement
-  >) => {
+  >) => (
     // TODO: extract title from children
-    return (
-      <Code {...props} theme="material-default">
-        {children as any}
-      </Code>
-    );
-  },
+    <Code {...props} theme="material-default">
+      {children}
+    </Code>
+  ),
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
   img: MDXImage as any,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
   Image: NextImage as any,
   Details: ({
     children,
@@ -32,7 +32,7 @@ export const mdxComponents: MDXComponents = {
   }) => (
     // Necessary due to a hydration error I can't quite figure out
     <details {...props}>
-      {summary && <summary>{summary}</summary>}
+      {summary ? <summary>{summary}</summary> : undefined}
       {children}
     </details>
   ),

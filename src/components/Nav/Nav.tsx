@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { ModeToggle } from './ModeToggle';
+import Link from 'next/link';
 
 export function Nav() {
   return (

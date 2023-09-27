@@ -1,4 +1,4 @@
-export type Post = {
+export interface Post {
   title: string;
   slug: string;
   date: string;
@@ -10,13 +10,13 @@ export type Post = {
   // Third party only
   isThirdParty?: boolean;
   href?: string;
-};
+}
 
-export type Project = {
+export interface Project {
   title: string;
   description: string;
   href: string;
   role: string;
   years: string[];
   stars?: number;
-};
+}

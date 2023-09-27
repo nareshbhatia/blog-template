@@ -12,13 +12,13 @@ export function MDXImage({
 }) {
   let widthFromSrc, heightFromSrc;
   const url = new URL(src, 'https://maxleiter.com');
-  const widthParam = url.searchParams.get('w') || url.searchParams.get('width');
+  const widthParam = url.searchParams.get('w') ?? url.searchParams.get('width');
   const heightParam =
-    url.searchParams.get('h') || url.searchParams.get('height');
-  if (widthParam) {
+    url.searchParams.get('h') ?? url.searchParams.get('height');
+  if (widthParam !== null) {
     widthFromSrc = parseInt(widthParam);
   }
-  if (heightParam) {
+  if (heightParam !== null) {
     heightFromSrc = parseInt(heightParam);
   }
 
@@ -26,8 +26,8 @@ export function MDXImage({
     src,
     alt,
     // tweak these to your liking
-    height: heightFromSrc || 450,
-    width: widthFromSrc || 550,
+    height: heightFromSrc ?? 450,
+    width: widthFromSrc ?? 550,
   };
 
   return <NextImage {...imageProps} />;

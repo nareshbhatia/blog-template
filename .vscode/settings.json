@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["clsx", "tailwindcss"],
+  "cSpell.words": ["clsx", "rehype", "tailwindcss"],
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.indentSize": 2,

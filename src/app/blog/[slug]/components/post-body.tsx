@@ -4,7 +4,6 @@ import { mdxComponents } from '@/components/MDXComponents';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import remarkA11yEmoji from '@fec/remark-a11y-emoji';
 import remarkToc from 'remark-toc';
 
 export function PostBody({ children }: { children: string }) {
@@ -16,8 +15,6 @@ export function PostBody({ children }: { children: string }) {
           remarkPlugins: [
             // Adds support for GitHub Flavored Markdown
             remarkGfm,
-            // Makes emojis more accessible
-            remarkA11yEmoji,
             // generates a table of contents based on headings
             remarkToc,
           ],

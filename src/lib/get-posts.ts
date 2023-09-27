@@ -10,6 +10,7 @@ import { cache } from 'react';
  * when rendering the page.
  */
 export const getPosts = cache(async () => {
+  console.log('----> getPosts():', process.cwd());
   const posts = await fs.readdir('./posts/');
 
   return Promise.all(
@@ -17,6 +18,7 @@ export const getPosts = cache(async () => {
       .filter((file) => path.extname(file) === '.mdx')
       .map(async (file) => {
         const filePath = `./posts/${file}`;
+        console.log('----> readFile:', filePath);
         const postContent = await fs.readFile(filePath, 'utf8');
         const { data, content } = matter(postContent);
 
@@ -26,6 +28,7 @@ export const getPosts = cache(async () => {
 });
 
 export async function getPost(slug: string) {
+  console.log('----> getPost():', slug);
   const posts = await getPosts();
   return posts.find((post) => post.slug === slug);
 }

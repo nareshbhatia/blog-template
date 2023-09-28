@@ -8,7 +8,7 @@ import remarkToc from 'remark-toc';
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   experimental: {
-    mdxRs: true,
+    mdxRs: false,
   },
 };
 

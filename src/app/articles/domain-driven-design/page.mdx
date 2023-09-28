@@ -1,13 +1,13 @@
----
-title: Domain-Driven Design
-description:
-  An approach for building high-quality products that meet the needs of a
-  business and its customers
-slug: domain-driven-design
-date: Feb 22, 2015
----
+import Link from 'next/link';
+import Image from 'next/image';
 
-# Domain-Driven Design
+export const meta = {
+  author: 'Naresh Bhatia',
+  date: '2015-02-22',
+  title: '1. Domain-Driven Design',
+  description:
+    'Domain-Driven Design (DDD) is an approach for building high-quality products that meet the needs of a business and its customers. It emphasizes collaboration among domain experts, product managers, designers, engineers, and other disciplines to create a domain model that reflects these needs.',
+};
 
 Domain-Driven Design (DDD) is an approach for building high-quality products
 that meet the needs of a business and its customers. It emphasizes collaboration
@@ -43,10 +43,33 @@ We'll use the example of a sample trading application, called Bullsfirst along
 the way. Here's what the application looks like:
 
 <img
-  src="/blog/domain-driven-design/bullsfirst-screenshot.png"
+  src="/articles/domain-driven-design/bullsfirst-screenshot.png"
   alt="Bullsfirst Screenshot"
 />
 
 Bullsfirst allows traders to open an account at a brokerage firm. They can then
 place orders to buy and sell securities. The brokerage firm places the orders in
 an exchange where they can be executed.
+
+## Navigation
+
+1. Introduction
+2. <Link href="/articles/domain-driven-design-2-ubiquitous-language">
+     Ubiquitous Language
+   </Link>
+3. <Link href="/articles/domain-driven-design-3-domain-model">
+     Domain Model
+   </Link>
+4. <Link href="/articles/domain-driven-design-4-bounded-context">
+     Bounded Context
+   </Link>
+5. <Link href="/articles/domain-driven-design-5-command-query-separation">
+     Command-Query Separation
+   </Link>
+6. <Link href="/articles/domain-driven-design-6-layered-architecture">
+     Layered Architecture
+   </Link>
+7. <Link href="/articles/domain-driven-design-7-domain-layer">
+     Domain Layer
+   </Link>
+8. <Link href="/articles/domain-driven-design-8-conclusion">Conclusion</Link>

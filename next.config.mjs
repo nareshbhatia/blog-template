@@ -1,40 +1,23 @@
-import withBundleAnalyzer from '@next/bundle-analyzer';
+import remarkGfm from 'remark-gfm';
+import createMDX from '@next/mdx';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
+import remarkToc from 'remark-toc';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true,
-  reactStrictMode: true,
-  pageExtensions: ['md', 'tsx', 'ts', 'jsx', 'js', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   experimental: {
-    optimizeCss: true,
-    mdxRs: false,
-  },
-  async redirects() {
-    return [
-      {
-        source: '/X11',
-        destination: '/blog/X11',
-        permanent: true,
-      },
-      {
-        source: '/atom',
-        destination: '/feed.xml',
-        permanent: true,
-      },
-      {
-        source: '/feed',
-        destination: '/feed.xml',
-        permanent: true,
-      },
-      {
-        source: '/rss',
-        destination: '/feed.xml',
-        permanent: true,
-      },
-    ];
+    mdxRs: true,
   },
 };
 
-export default withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-})(nextConfig);
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm, remarkToc],
+    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+    providerImportSource: '@mdx-js/react',
+  },
+});
+export default withMDX(nextConfig);

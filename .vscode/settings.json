@@ -1,5 +1,8 @@
 {
   "cSpell.words": ["clsx", "rehype", "tailwindcss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.indentSize": 2,

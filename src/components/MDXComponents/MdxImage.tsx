@@ -1,15 +1,14 @@
 import NextImage from 'next/image';
 
-export function MDXImage({
-  src,
-  alt,
-}: React.DetailedHTMLProps<
+export type MdxImageProps = React.DetailedHTMLProps<
   React.ImgHTMLAttributes<HTMLImageElement>,
   HTMLImageElement
 > & {
   src: string;
   alt: string;
-}) {
+};
+
+export function MdxImage({ src, alt }: MdxImageProps) {
   let widthFromSrc, heightFromSrc;
   const url = new URL(src, 'https://maxleiter.com');
   const widthParam = url.searchParams.get('w') ?? url.searchParams.get('width');

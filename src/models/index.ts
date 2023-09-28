@@ -1,4 +1,4 @@
-export interface Post {
+export interface Article {
   title: string;
   slug: string;
   date: string;
@@ -7,9 +7,6 @@ export interface Post {
   body: string;
   lastModified?: number;
   views?: number;
-  // Third party only
-  isThirdParty?: boolean;
-  href?: string;
 }
 
 export interface Project {

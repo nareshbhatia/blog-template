@@ -1,3 +1,4 @@
+// import { MdxImage, MdxPre } from '@/components/MdxComponents';
 import { Nav } from '@/components/Nav';
 import type { Metadata } from 'next';
 
@@ -6,11 +7,18 @@ export const metadata: Metadata = {
   description: 'Naresh Bhatia',
 };
 
-interface PostLayoutProps {
+/*
+ * const components = {
+ *   img: MdxImage,
+ *   pre: MdxPre,
+ * };
+ */
+
+interface ArticleLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: PostLayoutProps) {
+export default function ArticleLayout({ children }: ArticleLayoutProps) {
   return (
     <div className="mx-auto max-w-3xl p-4">
       <div className="divide-y">

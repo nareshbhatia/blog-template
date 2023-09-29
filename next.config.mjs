@@ -7,7 +7,7 @@ import rehypeSlug from 'rehype-slug';
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   experimental: {
-    // true breaks remark and rehype plugins
+    // set to false because true breaks remark and rehype plugins
     mdxRs: false,
   },
 };

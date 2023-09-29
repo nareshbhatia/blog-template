@@ -7,15 +7,15 @@ export async function getArticles() {
     cwd: path.join(process.cwd(), 'src/app/articles'),
   });
 
-  return files.map(
-    (file) =>
-      ({
-        title: file,
-        slug: file,
-        date: '2023-01-01',
-        tags: ['tech'],
-        description: 'This is cool',
-        body: 'Hello World',
-      } as Article)
-  );
+  return files.map((file) => {
+    const slug = file.substring(0, file.lastIndexOf('/'));
+    return {
+      title: slug,
+      slug,
+      date: '2023-01-01',
+      tags: ['tech'],
+      description: 'This is cool',
+      body: 'Hello World',
+    } as Article;
+  });
 }

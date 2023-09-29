@@ -17,8 +17,6 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
   },
 });
 export default withMDX(nextConfig);

@@ -1,20 +1,13 @@
-import { ArticleList } from '@/components/ArticleList';
-import { Nav } from '@/components/Nav';
-import { getArticles } from '@/utils/get-articles';
-
-export default async function Home() {
-  const articles = await getArticles();
+export default function Home() {
   return (
-    <div className="mx-auto max-w-3xl p-4">
-      <div className="divide-y">
-        <Nav />
-        <div className="mx-auto p-6">
-          <article className="prose prose-slate prose-sky dark:prose-invert">
-            <h2>My Articles</h2>
-            <ArticleList articles={articles} />
-          </article>
-        </div>
-      </div>
+    <div className="mt-6">
+      <h1>Software engineer, founder, and amateur musician.</h1>
+      <p className="mt-6">
+        I’m Naresh, a software engineer and entrepreneur based in Boston. I am a
+        Principal Engineer at Cruise, where I work on our driverless car
+        platform, connecting people to the places, things, and experiences they
+        care about.
+      </p>
     </div>
   );
 }

@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["Bhatia", "clsx", "Naresh", "rehype", "tailwindcss"],
+  "cSpell.words": [
+    "Bhatia",
+    "clsx",
+    "lucide",
+    "Naresh",
+    "rehype",
+    "tailwindcss"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },

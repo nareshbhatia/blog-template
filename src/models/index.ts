@@ -1,12 +1,9 @@
 export interface Article {
-  title: string;
   slug: string;
+  author: string;
   date: string;
-  tags: string[];
+  title: string;
   description: string;
-  body: string;
-  lastModified?: number;
-  views?: number;
 }
 
 export interface Project {

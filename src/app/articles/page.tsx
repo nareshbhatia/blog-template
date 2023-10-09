@@ -1,8 +1,9 @@
+import { articles } from './articles';
 import { ArticleList } from '@/components/ArticleList';
-import { getArticles } from '@/utils/get-articles';
+// import { getArticles } from '@/utils/get-articles';
 
-export default async function Articles() {
-  const articles = await getArticles();
+export default function Articles() {
+  // const articles = await getArticles();
   return (
     <div className="mt-6">
       <h1>My Articles</h1>

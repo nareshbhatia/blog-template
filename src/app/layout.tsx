@@ -37,11 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </div>
               </div>
             </header>
-            <main className="container flex-1">
-              <div className="prose prose-slate prose-sky max-w-none dark:prose-invert">
-                {children}
-              </div>
-            </main>
+            <main className="container flex-1">{children}</main>
             <SiteFooter />
           </div>
         </ThemeProvider>

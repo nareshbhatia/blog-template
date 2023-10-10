@@ -7,9 +7,11 @@ export interface ArticleListProps {
 
 export function ArticleList({ articles }: ArticleListProps) {
   return (
-    <ul>
+    <ul className="flex flex-col space-y-16">
       {articles.map((article) => (
-        <ArticleItem article={article} key={article.slug} />
+        <li key={article.slug}>
+          <ArticleItem article={article} />
+        </li>
       ))}
     </ul>
   );

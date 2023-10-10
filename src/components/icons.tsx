@@ -1,9 +1,17 @@
-import { Command, Moon, SunMedium, Twitter, X } from 'lucide-react';
+import {
+  ChevronRight,
+  Command,
+  Moon,
+  SunMedium,
+  Twitter,
+  X,
+} from 'lucide-react';
 import type { LucideProps, LucideIcon } from 'lucide-react';
 
 export type Icon = LucideIcon;
 
 export const Icons = {
+  chevronRight: ChevronRight,
   close: X,
   gitHub: ({ ...props }: LucideProps) => (
     <svg

@@ -1,4 +1,5 @@
 import {
+  ChevronDown,
   ChevronRight,
   Command,
   Moon,
@@ -11,6 +12,7 @@ import type { LucideProps, LucideIcon } from 'lucide-react';
 export type Icon = LucideIcon;
 
 export const Icons = {
+  chevronDown: ChevronDown,
   chevronRight: ChevronRight,
   close: X,
   gitHub: ({ ...props }: LucideProps) => (
